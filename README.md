@@ -20,7 +20,7 @@ Para o perfeito funcionamento funcionamento do porgrama é preciso:
 2. Instalar os requirements através do comando "pip install -r requirements.txt";
 3. Abrir e executar o arquivo "conversor.py".
 
-### Funcionamento
 ---
+### Funcionamento
 https://github.com/byelde/numerical_bases_converter/assets/140332227/f3fcb221-e1cb-4414-b2e5-74e6ebb244fa
 
