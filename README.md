@@ -22,6 +22,5 @@ Para o perfeito funcionamento funcionamento do porgrama é preciso:
 
 ### Funcionamento
 ---
-https://github.com/byelde/numerical_bases_converter/assets/140332227/ce669859-a8a9-4a7c-a25c-d1f5484d4acf
-
+https://github.com/byelde/numerical_bases_converter/assets/140332227/f3fcb221-e1cb-4414-b2e5-74e6ebb244fa
 
