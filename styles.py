@@ -98,7 +98,7 @@ class Styles:
              'padding-top':'3%',
              'width':'90%',
              'overflow-wrap':'break-word',
-             'margin-bottom':'12px'
+             'margin-bottom':'32px'
         }
 
         outputTitle = {
