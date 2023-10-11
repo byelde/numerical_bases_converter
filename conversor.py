@@ -8,7 +8,6 @@ def parab10(num, bi):
     num = num.split('.')
     db = '0123456789abcdefghijklmnopqrstuvwxyz'
     na10 = 0
-
     
     num_int = num[0][::-1]
 
@@ -222,9 +221,10 @@ def reset(n_clicks):
     Output('input-baseF', 'valid'),
     [Input('input-num', 'value'),
      Input('input-baseI', 'value'),
-     Input('input-baseF', 'value'),]
+     Input('input-baseF', 'value'),
+     Input('input-baseI', 'value')]
 ], prevent_initial_call = True)
-def validateInputs(input_num, input_baseI, input_baseF):
+def validateInputs(input_num, input_baseI, input_baseF, bi):
 
     db = '0123456789abcdefghijklmnopqrstuvwxyz'
 
@@ -232,10 +232,14 @@ def validateInputs(input_num, input_baseI, input_baseF):
         retnum, retbasei, retbasef = True, True, True
 
         for letra in input_num:
-            if letra not in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.':
+            if letra.lower() not in '0123456789abcdefghijklmnopqrstuvwxyz'[:bi]:
                 retnum = False
                 break
         
+        # for letra in input_num:
+        #     if letra not in '0123456789abcdefghijklmnopqrstuvwxyz'[:bi]:
+        #         retnum, retbasei = False, False
+
         if input_baseI not in range(2,37):
             retbasei = False
         
