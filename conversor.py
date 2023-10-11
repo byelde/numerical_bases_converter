@@ -1,7 +1,6 @@
 import dash
 from dash import dcc, Input, Output, html, State
 import dash_bootstrap_components as dbc
-from styles import Styles
 
 def parab10(num, bi):
 
@@ -88,11 +87,18 @@ app.layout = html.Div([
  
     # Header
     html.Div([
-        dbc.Label('Laboratório ICC', style=Styles.headerText),
+
+        dbc.Label('Laboratório ICC', className='headerText'),
+
         html.A([
+
             html.Img(src=r'assets/github_logo.png', alt='image', style={'width':'48px',})
-        ], href='https://github.com/byelde/numerical_bases_converter', style={'padding-right':'1%'}),
-    ], style=Styles.header),
+
+        ], href='https://github.com/byelde/numerical_bases_converter', style={'padding-right':'1%'}
+        ),
+
+    ], className='header'),
+
 
     # Card
     html.Div([
@@ -105,77 +111,68 @@ app.layout = html.Div([
                 html.Img(src=r'assets/logo.png', alt='image'),
                 html.H3('Conversor de bases numéricas', style={'padding-left':'1%'})
 
-            ], style=Styles.title),
+            ], className='title'),
 
             # Inputs
             html.Div([
                 html.Div([
 
-                    dbc.Label('Número:', style=Styles.inputsLabels),
+                    dbc.Label('Número:', className='inputsLabels'),
                     dbc.Input(placeholder = 'Digite um valor inteiro', valid = False, id = 'input-num', type = 'text'),
                     dbc.FormText('*Valores entre as bases 2-36')
 
-                ], style=Styles.inputs),
+                ], className='inputs'),
 
                 html.Div([
 
-                    dbc.Label('Base Inicial:', style=Styles.inputsLabels),
+                    dbc.Label('Base Inicial:', className='inputsLabels'),
                     dbc.Input(placeholder = 'Digite um valor inteiro', valid = False, id = 'input-baseI', type = 'number'),
                     dbc.FormText('*Valor entre 2-36')
 
-                ], style=Styles.inputs),
+                ], className='inputs'),
 
                 html.Div([
 
-                    dbc.Label('Base Final:', style=Styles.inputsLabels),
+                    dbc.Label('Base Final:', className='inputsLabels'),
                     dbc.Input(placeholder = 'Digite um valor inteiro', valid = False, id = 'input-baseF', type = 'number'),
                     dbc.FormText('*Valor entre 2-36')
-                ], style=Styles.inputs),
 
-            ], style=Styles.inputsParent),
+                ], className='inputs'),
+
+            ], className='inputsParent'),
 
             # Buttons
             html.Div([
 
                 html.Div([
+                    
                     dbc.Label(
-                        'Qtde. digitos fracionários:',
-                        style=Styles.inputsLabels
+                        'Qtde. digitos fracionários:', className='inputsLabels'
                     ),
                     dcc.Slider(
-                        id='frac_picker',
-                        min=1,
-                        max=15,
-                        step=1,
+                        id='frac_picker', min=1, max=15, step=1, value=1,
                         marks={ 1:'1', 3:'3', 6:'6', 9:'9', 12:'12', 15:'15' },
-                        value=1,
                     ),
-                ], style={'width':'20%'}),
-                dbc.Button('CALCULAR', color = 'danger', id = 'Calcular', style=Styles.buttons, n_clicks=0),
-                dbc.Button('RESETAR', color = 'danger', id = 'Resetar', outline = True, style=Styles.buttons, n_clicks=0)
 
-            ], style=Styles.buttonsParent),
+                ], style={'width':'20%'}),
+                dbc.Button('CALCULAR', color = 'danger', id = 'Calcular', className='buttons', n_clicks=0),
+                dbc.Button('RESETAR', color = 'danger', id = 'Resetar', outline = True, className='buttons', n_clicks=0)
+
+            ], className='buttonsParent'),
 
             # Output
             html.Div([
 
-                dbc.Label(
-                    'Resultado: ',
-                    style=Styles.outputTitle
-                ),
-                dbc.Label(
-                    children = 'Resultado',
-                    id = 'output_result',
-                    style=Styles.outputText
-                )
+                dbc.Label('Resultado: ', className='outputTitle'),
+                dbc.Label(children = 'Resultado', id = 'output_result', className='outputText')
 
-            ], style=Styles.outputParent),
+            ], className='outputParent'),
 
-        ], style=Styles.cardChildren)
+        ], className='cardChildren')
 
-    ], style=Styles.card)
+    ], className='card')
 
-], style=Styles.page)
+], className='page')
 
 @app.callback([
     Output('output_result', 'children', allow_duplicate=True),
