@@ -91,10 +91,8 @@ app.layout = html.Div([
         dbc.Label('Laboratório ICC', className='headerText'),
 
         html.A([
-
-            html.Img(src=r'assets/github_logo.png', alt='image', style={'width':'48px',})
-
-        ], href='https://github.com/byelde/numerical_bases_converter', style={'padding-right':'1%'}
+            html.Img(src=r'assets/github_logo.png', alt='image', style={'width':'48px',})],
+            href='https://github.com/byelde/numerical_bases_converter', style={'padding-right':'1%'}
         ),
 
     ], className='header'),
