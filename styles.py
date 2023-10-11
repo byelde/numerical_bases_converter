@@ -11,8 +11,11 @@ class Styles:
         }
 
         header = {
+             'display':'flex',
              'background-color':'#E72313',
-             'width':'100%'
+             'width':'100%',
+             'align-items':'center',
+             'justify-content':'space-between'
         }
 
         headerText = {
@@ -21,7 +24,7 @@ class Styles:
             'font-style': 'bold',
             'font-weight': '700',
             'line-height': 'normal',
-            'padding-left':'1%'
+            'padding-left':'1%',
         }
 
         card = {
@@ -74,7 +77,7 @@ class Styles:
         inputs = {
             'marging-left':'9%',
             'marging-right':'9%',
-            'padding-bottom':'6%',
+            'padding-bottom':'4%',
             'width' : '20%'
         }
 
