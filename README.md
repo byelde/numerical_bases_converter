@@ -16,7 +16,7 @@ Esse projeto se trata do trabalho final solicitado para a matéria de Introduç�
 ## Guia de uso:
 ### Execução
 Para o perfeito funcionamento funcionamento do porgrama é preciso:
-1. Baixar todos os arquivos deste diretório e dexa-los na mesma pasta;
+1. Baixar todos os arquivos deste diretório e deixa-los na mesma pasta;
 2. Instalar os requirements através do comando "pip install -r requirements.txt";
 3. Abrir e executar o arquivo "conversor.py".
 
